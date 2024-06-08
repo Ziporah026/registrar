@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="Reg.css">
+        <style>
+            .section {
+    display: none;
+}
+.section.active {
+    display: block;
+}
+        </style>
+    </head>
+    <body>
+        <div>
+        <form id="regForm" action="regist.php" method="POST">
+            <center><h1><u>KENSWED REGISTRATION FORM</u></h1></center>
+            <div class="section active" id="personal-details">
+            <h2>Personal Details:</h2>
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="fname">First Name:</label><br>
+                <input type="text" name="fname" placeholder="Enter First Name" required size="15"><br>
+                <label for="sname">Second Name:</label><br>
+                <input type="text" name="sname" placeholder="Enter Second Name" required size="15"> <br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" name="lname" placeholder="Enter Last Name" required size="15"><br>
+                <label for="gender">Gender:<br>
+                <input type="text" name="gender" list="gender" placeholder="Select Your Gender">
+                <datalist name="gender" id="gender">
+                <option value="Male"></option>
+                <option value="Female"></option>
+                <option value="Others"></option>
+                </datalist><br>
+                <label for="dob">Date Of Birth:</label><br>
+                <input type="date" name="dob" required><br>
+                <label for="phoneNumber">Phone Number:</label><br>
+                <input type="text" name="phoneNumber" placeholder="Enter Mobile Number" size="15" required><br>
+                <label for="emailAddress">Email Address:</label><br>
+                <input type="email" name="emailAddress" placeholder="Enter Email Address" size="15px" required>
+            </fieldset><br><br>
+                <div class="navigation-buttons">
+                <button type="button" onclick="nextSection('personal-details', 'academic-details')">Next</button>
+            </div>
+            </div>
+            <div class="section" id="academic-details">
+            <h2>Academics:</h2>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <label for="grades">K.C.S.E. Grade:</label><br>
+                <input type="text" name="grades" list="kcsegrade" placeholder="Select Your Greade" required>
+                <datalist id="kcsegrade">
+                <option value="A"></option>
+                <option value="A-"></option>
+                <option value="B+"></option>
+                <option value="B"></option>
+                <option value="B-"></option>
+                <option value="C+"></option>
+                <option value="C"></option>
+                <option value="C-"></option>
+                <option value="D+"></option>
+                <option value="D"></option>
+                <option value="D-"></option>
+                <option value="E"></option>
+                </datalist><br>
+                <label for="regYear">Registration Year:</label><br>
+                <input type="month" name="regYear" rquired><br>
+                <label for="course">Course:</label><br>
+                <input type="text" name="course" list="course" placeholder="Select Your Course" required>
+                <datalist id="course">
+                    <option value="ICP"></option>
+                    <option value="HDBT"></option>
+                    <option value="Pastry"></option>
+                    <option value="Music Production"></option>
+                    <option value="Tailoring and Design"></option>
+                    <option value="SHEP"></option>
+                </datalist><br>
+                <label for="regNumber">Registration Number:</label><br>
+                <input type="text" name="regNumber" placeholder="Enter Your Admission Number" size="15" required><br>
+                <label for="pass">Password:</label><br>
+                <input type="password" name="pass" placeholder="Enter Your Password" size="15" required><br>
+                <label for="passConfirm">Confirm Password:</label><br>
+                <input type="password" name="passConfirm" placeholder="Confirm Your Password" size="15" required>
+                <div>
+                    <label for="hobbies">Hobbies:</label>
+                    <input type="checkbox" name="hobbies" value="running">Running
+                    <input type="checkbox" name="hobbies" value="hiking">Hiking
+                    <input type="checkbox" name="hobbies" value="compassionate">Compassionate
+                    <input type="checkbox" name="hobbies" value="coding">Coding
+                    <input type="checkbox" name="hobbies" value="dancing">Dancing<br>
+                </div>
+            </fieldset><br><br>
+            <div class="navigation-buttons">
+                <button type="button" onclick="prevSection('academic-details', 'personal-details')">Previous</button>
+                    <button type="button" onclick="nextSection('academic-details', 'background-details')">Next</button>   
+                </div>
+        </div>
+        <div class="section" id="background-details">
+            <h2>Background Details:</h2>
+                <fieldset>
+                <legend>Student Background Information</legend>
+                <label for="father">Father's Name:</label><br>
+                <input type="text" name="father" placeholder="Enter Father's Name" required size="15"><br>
+                <label for="mother">Mother's Name:</label><br>
+                <input type="text" name="mother" placeholder="Enter Mother's Name" required size="15"><br>
+                <label for="homeAddress">Home Address:</label><br>
+                <input type="text" name="homeAddress" placeholder="Enter Home Address" size="15px" required><br>
+                <label for="county">County:<br>
+                <input type="text" name="county" list="county" placeholder="Select Your County">
+                    <datalist id="county">
+                        <option value="Mombasa"></option>
+                        <option value="Kwale"></option>
+                        <option value="Kilifi"></option>
+                        <option value="Tana River"></option>
+                        <option value="Lamu"></option>
+                        <option value="Taita-Taveta"></option>
+                        <option value="Garissa"></option>
+                        <option value="Wajir"></option>
+                        <option value="Mandera"></option>
+                        <option value="Marsabit"></option>
+                        <option value="Isiolo"></option>
+                        <option value="Meru"></option>
+                        <option value="Tharaka-Nithi"></option>
+                        <option value="Embu"></option>
+                        <option value="Kitui"></option>
+                        <option value="Machakos"></option>
+                        <option value="Makueni"></option>
+                        <option value="Nyandarua"></option>
+                        <option value="Nyeri"></option>
+                        <option value="Kirinyaga"></option>
+                        <option value="Murang'a"></option>
+                        <option value="Kiambu"></option>
+                        <option value="Turkana"></option>
+                        <option value="West Pokot"></option>
+                        <option value="Samburu"></option>
+                        <option value="Trans-Nzoia"></option>
+                        <option value="Uasin Gishu"></option>
+                        <option value="Elgeyo-Marakwet"></option>
+                        <option value="Nandi"></option>
+                        <option value="Baringo"></option>
+                        <option value="Laikipia"></option>
+                        <option value="Nakuru"></option>
+                        <option value="Narok"></option>
+                        <option value="Kajiado"></option>
+                        <option value="Kericho"></option>
+                        <option value="Bomet"></option>
+                        <option value="Kakamega"></option>
+                        <option value="Vihiga"></option>
+                        <option value="Bungoma"></option>
+                        <option value="Busia"></option>
+                        <option value="Siaya"></option>
+                        <option value="Kisumu"></option>
+                        <option value="Homa Bay"></option>
+                        <option value="Migori"></option>
+                        <option value="Kisii"></option>
+                        <option value="Nyamira"></option>
+                        <option value="Nairobi"></option>
+                    </datalist>
+                   </label><br>
+                   <label for="comment">Comment:</label><br>
+                    <textarea name="comment" id="comment" cols="57" rows="10" placeholder="Enter Your Feedback"></textarea>
+                    <p>I have agreed and confirmed the above information <input type="checkbox" name="" value=""></p>
+                    <input type="submit" name="submit" value="sign-up"><br><br>
+                    <input type="reset" name="reset" value="reset">
+                </fieldset><br><br>
+                <div class="navigation-buttons">
+                    <button type="button" onclick="prevSection('background-details', 'academic-details')">Previous</button>
+                </div>
+        </div>
+          </form>
+        </div>
+    </body>
+    <script>
+        function nextSection(current) {
+            document.getElementById('section' + current).classList.remove('active');
+            document.getElementById('section' + (current + 1)).classList.add('active');
+        }
+
+        function prevSection(current) {
+            document.getElementById('section' + current).classList.remove('active');
+            document.getElementById('section' + (current - 1)).classList.add('active');
+        }
+    </script>
+</html>
